@@ -1,0 +1,118 @@
+/* Dark theme + selective glassmorphism.
+   Glass is used only on floating layers (header, filters, contact panel, gauge, FAB).
+   Content surfaces (cards, forms, tables) stay solid for legibility.
+   To revert: remove the <link> to this file in templates/base.html. */
+:root{
+  color-scheme:dark;
+  --ink:#ececea;--line:#2a2a2e;--muted:#9a9a94;--paper:#17171a;
+  --s0:#0a0a0b;--s1:#131315;--s2:#1b1b1e;
+  --glass-bg:rgba(20,20,22,.55);--glass-border:rgba(255,255,255,.12);--glass-blur:blur(16px) saturate(140%);
+}
+body{background:var(--s0);color:var(--ink)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 50% 40% at 92% 0%,rgba(255,106,0,.16),transparent 70%),radial-gradient(ellipse 45% 35% at 0% 100%,rgba(255,106,0,.09),transparent 70%)}
+
+/* ---- glass layers ---- */
+.site-header,.filters,.panel,.gauge-card,.fab{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur)}
+.site-header{background:rgba(10,10,11,.55);border-bottom:1px solid var(--glass-border)}
+.filters,.panel,.gauge-card{background:var(--glass-bg);border:1px solid var(--glass-border);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 20px 50px rgba(0,0,0,.35)}
+.fab{background:rgba(255,106,0,.8);border:1px solid rgba(255,255,255,.3)}
+.fav-form button{background:rgba(10,10,11,.6);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid var(--glass-border)}.fav-form button.on{color:var(--orange)}
+.detail aside{position:sticky;top:84px;align-self:start}
+@media(max-width:900px){.detail aside{position:static}}
+@media(max-width:700px){:root{--glass-blur:blur(8px)}.nav{background:rgba(10,10,11,.92)!important}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .site-header{background:rgba(10,10,11,.96)}.filters,.panel,.gauge-card{background:#151517}.fab{background:var(--orange)}}
+@media(prefers-reduced-transparency:reduce){
+  .site-header,.filters,.panel,.gauge-card,.fab,.fav-form button{-webkit-backdrop-filter:none;backdrop-filter:none}
+  .site-header{background:#0a0a0b}.filters,.panel,.gauge-card{background:#151517}.fab{background:var(--orange)}}
+
+/* ---- solid content surfaces ---- */
+.card,.brands a,.steps div,.dealer-card,.steps2 div,.form-card,.stats div{background:var(--s1);border:1px solid var(--line);color:var(--ink)}
+.card:hover{box-shadow:0 14px 36px rgba(0,0,0,.5),0 0 0 1px rgba(255,106,0,.35)}
+.card .ph,.gallery .main{background:var(--s2)}
+.price{color:var(--orange)}
+.block-head a,.more a{color:var(--orange)}
+section.block.alt,.block.alt{background:rgba(255,255,255,.025)}
+.marquee{background:transparent;border-bottom:1px solid var(--line)}.marquee a{color:#6f6f69}.marquee a:hover{color:var(--orange)}
+.statbar{box-shadow:0 0 40px rgba(255,106,0,.25)}
+.empty{border-color:#34343a;color:var(--muted)}
+.verified{color:#4ade80}
+.dealer-logo,.dealer-card img{background:var(--s2)}
+
+/* ---- forms ---- */
+input,select,textarea{background:var(--s2);color:var(--ink);border:1.5px solid #34343a}
+input::placeholder,textarea::placeholder{color:#77777a}
+input:focus,select:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,106,0,.18)}
+select option{background:var(--s2);color:var(--ink)}
+label{color:#cfcfca}.help{color:var(--muted)}.errorlist{color:#ff8a80}
+
+/* ---- buttons ---- */
+.btn.ghost{color:var(--ink);border-color:rgba(255,255,255,.35)}.btn.ghost:hover{background:#fff;color:#0a0a0b}
+.btn.dark{background:#2a2a2d;color:#fff}.btn.dark:hover{background:#3a3a3e}
+.btn.danger{background:#b42318;color:#fff}
+
+/* ---- misc ---- */
+.table th{color:var(--muted)}.table th,.table td{border-bottom-color:var(--line)}
+.pager a,.pager span{border-color:var(--line);background:var(--s1)}.pager .cur{background:var(--orange);border-color:var(--orange);color:#fff}
+.messages .success{background:rgba(34,197,94,.15);color:#7ee2a3}.messages .error{background:rgba(239,68,68,.15);color:#ff9a93}
+.specs div{border-bottom-color:var(--line)}
+.thumbs img{background:var(--s2)}
+.site-footer{border-top:1px solid var(--line)}
+a:focus-visible,button:focus-visible{outline-color:var(--orange)}
+
+/* =====================================================================
+   LIQUID LAYER — floating pill header, wet-glass sheen, pointer light,
+   elastic presses. Optional Chromium-only ripple on panels (class .refract).
+   To revert to plain glass: delete everything below this comment.
+   ===================================================================== */
+@property --lx{syntax:'<percentage>';inherits:true;initial-value:30%}
+@property --ly{syntax:'<percentage>';inherits:true;initial-value:-10%}
+.svg-defs{position:absolute;width:0;height:0;overflow:hidden}
+
+.site-header,.filters,.panel,.gauge-card,.fab{isolation:isolate;
+  background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.03) 45%,rgba(255,255,255,.07)),var(--glass-bg);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.40),inset 0 -1px 1px rgba(255,255,255,.10),inset 0 0 24px rgba(255,255,255,.035),0 18px 44px rgba(0,0,0,.40);
+  transition:--lx .3s ease,--ly .3s ease,box-shadow .25s}
+.site-header::before,.filters::before,.panel::before,.gauge-card::before,.fab::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
+  background:radial-gradient(circle at var(--lx) var(--ly),rgba(255,255,255,.20),transparent 42%),linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,0) 38%)}
+.filters,.panel{position:relative;border-radius:24px}
+.gauge-card{border-radius:28px}
+
+/* floating pill header */
+.site-header{position:sticky;top:10px;margin:10px auto 0;width:min(1180px,calc(100% - 24px));border-radius:999px;z-index:50}
+.site-header .wrap{padding:0 22px;position:relative}
+.site-header.scrolled .wrap{height:64px}
+.site-header.scrolled{box-shadow:inset 0 1px 1px rgba(255,255,255,.40),inset 0 -1px 1px rgba(255,255,255,.10),0 14px 36px rgba(0,0,0,.55)}
+.nav a,.nav button.linklike{border-radius:999px}
+.nav a:hover,.nav a[aria-current="page"]{background:rgba(255,255,255,.12)}
+.lang button{border-radius:999px;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22)}
+@media(max-width:860px){
+  .nav{top:calc(100% + 8px);border-radius:24px;border:1px solid rgba(255,255,255,.18);margin:0;
+    -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);box-shadow:0 24px 50px rgba(0,0,0,.55)}
+  .nav a{padding:12px 14px}
+}
+/* on the home page the pill floats over the hero */
+body.home .site-header{margin-bottom:-74px}
+body.home .hero3-grid{padding-top:calc(56px + 74px)}
+@media(max-width:960px){body.home .hero3-grid{padding-top:calc(28px + 74px)}}
+
+/* fab */
+.fab{background:linear-gradient(135deg,rgba(255,150,60,.95),rgba(255,106,0,.78));border-color:rgba(255,255,255,.35)}
+
+/* elastic presses */
+.btn{transition:transform .45s cubic-bezier(.34,1.56,.64,1),background .15s}
+.btn:active{transform:scale(.95)}
+.card:active{transform:scale(.985)}
+.fab{transition:transform .45s cubic-bezier(.34,1.56,.64,1),--lx .3s ease,--ly .3s ease}
+.fab:active{transform:scale(.93)}
+
+/* optional ripple (set by JS only on desktop Chromium; panels sit over static content so it stays cheap) */
+.refract .filters,.refract .panel{
+  -webkit-backdrop-filter:blur(12px) saturate(150%) url(#liquid-distort);
+  backdrop-filter:blur(12px) saturate(150%) url(#liquid-distort)}
+
+@media(prefers-reduced-motion:reduce){.btn,.fab{transition:none}.btn:active,.fab:active,.card:active{transform:none}}
+@media(prefers-reduced-transparency:reduce){body.home .site-header{margin-bottom:-74px}}

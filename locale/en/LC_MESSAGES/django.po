@@ -1,0 +1,874 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-14 09:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/accounts/forms.py:10
+msgid "Email"
+msgstr ""
+
+#: apps/accounts/forms.py:17
+msgid "This email is already registered."
+msgstr ""
+
+#: apps/accounts/models.py:9 apps/cars/models.py:84
+#: apps/dealerships/models.py:14
+msgid "Phone number"
+msgstr ""
+
+#: apps/accounts/models.py:10 apps/cars/models.py:80
+#: apps/dealerships/models.py:12 templates/cars/detail.html:18
+#: templates/cars/list.html:17
+msgid "City"
+msgstr ""
+
+#: apps/accounts/views.py:18 apps/reports/views.py:20
+msgid "Too many requests. Please try again later."
+msgstr ""
+
+#: apps/accounts/views.py:24
+msgid "Welcome to AutoMarket.al!"
+msgstr ""
+
+#: apps/accounts/views.py:42
+msgid "Profile updated."
+msgstr ""
+
+#: apps/accounts/views.py:62
+msgid "Too many attempts. Try again in 15 minutes."
+msgstr ""
+
+#: apps/cars/forms.py:27
+#, python-format
+msgid "Each image must be smaller than %(mb)s MB."
+msgstr ""
+
+#: apps/cars/forms.py:31 apps/cars/forms.py:37
+msgid "Invalid image file."
+msgstr ""
+
+#: apps/cars/forms.py:39
+msgid "Only JPG, PNG or WebP images are allowed."
+msgstr ""
+
+#: apps/cars/forms.py:44
+msgid "Photos"
+msgstr ""
+
+#: apps/cars/forms.py:45 apps/cars/models.py:82 apps/dealerships/models.py:11
+#: templates/cars/detail.html:6
+msgid "Description"
+msgstr ""
+
+#: apps/cars/forms.py:46 apps/cars/models.py:83 templates/cars/detail.html:7
+msgid "Equipment"
+msgstr ""
+
+#: apps/cars/forms.py:46 apps/cars/models.py:83
+msgid "One item per line"
+msgstr ""
+
+#: apps/cars/forms.py:47
+msgid "Other brand (if not listed)"
+msgstr ""
+
+#: apps/cars/forms.py:65
+msgid "Invalid brand name."
+msgstr ""
+
+#: apps/cars/forms.py:71
+msgid "Enter a valid year."
+msgstr ""
+
+#: apps/cars/forms.py:78
+msgid "Enter a valid phone number."
+msgstr ""
+
+#: apps/cars/forms.py:84
+#, python-format
+msgid "You can upload at most %(n)s photos."
+msgstr ""
+
+#: apps/cars/forms.py:99
+msgid "Choose a brand or type it in the other brand field."
+msgstr ""
+
+#: apps/cars/forms.py:101
+msgid "Add at least one photo."
+msgstr ""
+
+#: apps/cars/models.py:11 apps/cars/models.py:65 templates/cars/list.html:6
+msgid "Brand"
+msgstr ""
+
+#: apps/cars/models.py:31 templates/_card.html:3 templates/admin/stats.html:8
+msgid "Pending"
+msgstr ""
+
+#: apps/cars/models.py:32 templates/admin/stats.html:9
+#: templates/cars/detail.html:18
+msgid "Published"
+msgstr ""
+
+#: apps/cars/models.py:33
+msgid "Rejected"
+msgstr ""
+
+#: apps/cars/models.py:34 templates/_card.html:3 templates/admin/stats.html:10
+msgid "Sold"
+msgstr ""
+
+#: apps/cars/models.py:36
+msgid "Petrol"
+msgstr ""
+
+#: apps/cars/models.py:37
+msgid "Diesel"
+msgstr ""
+
+#: apps/cars/models.py:38
+msgid "Hybrid"
+msgstr ""
+
+#: apps/cars/models.py:39
+msgid "Electric"
+msgstr ""
+
+#: apps/cars/models.py:40
+msgid "LPG"
+msgstr ""
+
+#: apps/cars/models.py:42
+msgid "Manual"
+msgstr ""
+
+#: apps/cars/models.py:43
+msgid "Automatic"
+msgstr ""
+
+#: apps/cars/models.py:45
+msgid "Sedan"
+msgstr ""
+
+#: apps/cars/models.py:46
+msgid "Hatchback"
+msgstr ""
+
+#: apps/cars/models.py:47
+msgid "SUV"
+msgstr ""
+
+#: apps/cars/models.py:48
+msgid "Wagon"
+msgstr ""
+
+#: apps/cars/models.py:49
+msgid "Coupe"
+msgstr ""
+
+#: apps/cars/models.py:50
+msgid "Convertible"
+msgstr ""
+
+#: apps/cars/models.py:51
+msgid "Van"
+msgstr ""
+
+#: apps/cars/models.py:52
+msgid "Pickup"
+msgstr ""
+
+#: apps/cars/models.py:54
+msgid "New"
+msgstr ""
+
+#: apps/cars/models.py:55
+msgid "Used"
+msgstr ""
+
+#: apps/cars/models.py:56
+msgid "Damaged"
+msgstr ""
+
+#: apps/cars/models.py:58
+msgid "Imported"
+msgstr ""
+
+#: apps/cars/models.py:59
+msgid "Not imported"
+msgstr ""
+
+#: apps/cars/models.py:60
+msgid "Customs paid"
+msgstr ""
+
+#: apps/cars/models.py:66 templates/cars/list.html:7
+msgid "Model"
+msgstr ""
+
+#: apps/cars/models.py:67
+msgid "Version"
+msgstr ""
+
+#: apps/cars/models.py:68 apps/cars/views.py:41 templates/cars/compare.html:5
+#: templates/cars/detail.html:13 templates/cars/list.html:9
+msgid "Year"
+msgstr ""
+
+#: apps/cars/models.py:69 templates/cars/compare.html:4
+#: templates/cars/list.html:8 templates/dashboard/index.html:5
+msgid "Price (€)"
+msgstr ""
+
+#: apps/cars/models.py:70 templates/cars/compare.html:6
+#: templates/cars/detail.html:13
+msgid "Mileage (km)"
+msgstr ""
+
+#: apps/cars/models.py:71 templates/cars/compare.html:7
+#: templates/cars/detail.html:14 templates/cars/list.html:11
+msgid "Fuel"
+msgstr ""
+
+#: apps/cars/models.py:72 templates/cars/compare.html:8
+#: templates/cars/detail.html:14 templates/cars/list.html:12
+msgid "Transmission"
+msgstr ""
+
+#: apps/cars/models.py:73 templates/cars/compare.html:9
+#: templates/cars/detail.html:15 templates/cars/list.html:13
+msgid "Engine size (cc)"
+msgstr ""
+
+#: apps/cars/models.py:74 templates/cars/compare.html:10
+#: templates/cars/detail.html:15
+msgid "Power (hp)"
+msgstr ""
+
+#: apps/cars/models.py:75 templates/cars/compare.html:11
+#: templates/cars/detail.html:16 templates/cars/list.html:15
+msgid "Body type"
+msgstr ""
+
+#: apps/cars/models.py:76 templates/cars/detail.html:16
+#: templates/cars/list.html:16
+msgid "Color"
+msgstr ""
+
+#: apps/cars/models.py:77 templates/cars/detail.html:17
+#: templates/cars/list.html:18
+msgid "Condition"
+msgstr ""
+
+#: apps/cars/models.py:78
+msgid "Origin"
+msgstr ""
+
+#: apps/cars/models.py:79 templates/cars/detail.html:17
+msgid "Import status"
+msgstr ""
+
+#: apps/cars/models.py:81
+msgid "Listing title"
+msgstr ""
+
+#: apps/cars/models.py:85
+msgid "WhatsApp"
+msgstr ""
+
+#: apps/cars/views.py:41
+msgid "Newest"
+msgstr ""
+
+#: apps/cars/views.py:41
+msgid "Price: low to high"
+msgstr ""
+
+#: apps/cars/views.py:41
+msgid "Price: high to low"
+msgstr ""
+
+#: apps/cars/views.py:41
+msgid "Mileage"
+msgstr ""
+
+#: apps/cars/views.py:42 templates/cars/list.html:22
+msgid "Cars for sale"
+msgstr ""
+
+#: apps/cars/views.py:69
+msgid "Daily listing limit reached. Try again tomorrow."
+msgstr ""
+
+#: apps/cars/views.py:80
+msgid "Listing submitted for approval."
+msgstr ""
+
+#: apps/cars/views.py:80
+msgid "Listing published."
+msgstr ""
+
+#: apps/cars/views.py:97
+msgid "Listing updated."
+msgstr ""
+
+#: apps/cars/views.py:105
+msgid "Listing deleted."
+msgstr ""
+
+#: apps/cars/views.py:114
+msgid "Marked as sold."
+msgstr ""
+
+#: apps/cars/views.py:125
+msgid "Photo deleted."
+msgstr ""
+
+#: apps/core/models.py:6
+msgid "Require approval before publishing"
+msgstr ""
+
+#: apps/core/models.py:12 apps/core/models.py:13
+msgid "Site settings"
+msgstr ""
+
+#: apps/dealerships/models.py:8
+msgid "Name"
+msgstr ""
+
+#: apps/dealerships/models.py:13
+msgid "Address"
+msgstr ""
+
+#: apps/dealerships/models.py:17 templates/cars/detail.html:30
+#: templates/dealerships/_card.html:3 templates/dealerships/detail.html:3
+msgid "Verified dealership"
+msgstr ""
+
+#: apps/dealerships/models.py:41
+msgid "Basic"
+msgstr ""
+
+#: apps/dealerships/models.py:42
+msgid "Pro"
+msgstr ""
+
+#: apps/dealerships/views.py:23
+msgid "You can register at most 3 dealerships."
+msgstr ""
+
+#: apps/dealerships/views.py:29
+msgid ""
+"Dealership created. The verified badge is added by our team after checks."
+msgstr ""
+
+#: apps/dealerships/views.py:41
+msgid "Dealership updated."
+msgstr ""
+
+#: apps/favorites/views.py:22
+msgid "Removed from favorites."
+msgstr ""
+
+#: apps/favorites/views.py:24
+msgid "Saved to favorites."
+msgstr ""
+
+#: apps/reports/models.py:7
+msgid "Scam or fraud"
+msgstr ""
+
+#: apps/reports/models.py:8
+msgid "Wrong information"
+msgstr ""
+
+#: apps/reports/models.py:9
+msgid "Duplicate listing"
+msgstr ""
+
+#: apps/reports/models.py:10
+msgid "Already sold"
+msgstr ""
+
+#: apps/reports/models.py:11
+msgid "Other"
+msgstr ""
+
+#: apps/reports/models.py:14
+msgid "Reason"
+msgstr ""
+
+#: apps/reports/models.py:15
+msgid "Details"
+msgstr ""
+
+#: apps/reports/views.py:28
+msgid "Thank you. Our team will review the report."
+msgstr ""
+
+#: apps/reports/views.py:30 templates/cars/detail.html:26
+msgid "Report listing"
+msgstr ""
+
+#: apps/reports/views.py:30
+msgid "Send report"
+msgstr ""
+
+#: templates/_card.html:6 templates/cars/detail.html:23
+msgid "Save to favorites"
+msgstr ""
+
+#: templates/_pager.html:2
+msgid "Previous"
+msgstr ""
+
+#: templates/_pager.html:4
+msgid "Next"
+msgstr ""
+
+#: templates/accounts/form_page.html:2
+msgid "Account"
+msgstr ""
+
+#: templates/accounts/form_page.html:3 templates/dealerships/form.html:4
+msgid "Save"
+msgstr ""
+
+#: templates/accounts/login.html:2 templates/accounts/login.html:4
+#: templates/accounts/register.html:4 templates/base.html:30
+msgid "Log in"
+msgstr ""
+
+#: templates/accounts/login.html:5
+msgid "Forgot your password?"
+msgstr ""
+
+#: templates/accounts/login.html:5 templates/accounts/register.html:2
+#: templates/base.html:30
+msgid "Sign up"
+msgstr ""
+
+#: templates/accounts/message_page.html:2
+msgid "Check your email"
+msgstr ""
+
+#: templates/accounts/message_page.html:2
+msgid ""
+"If an account exists for that email, we have sent password reset "
+"instructions."
+msgstr ""
+
+#: templates/accounts/password_reset_email.txt:1
+msgid "Reset your AutoMarket.al password:"
+msgstr ""
+
+#: templates/accounts/profile.html:2 templates/dashboard/index.html:3
+msgid "Profile"
+msgstr ""
+
+#: templates/accounts/profile.html:3 templates/cars/form.html:14
+msgid "Save changes"
+msgstr ""
+
+#: templates/accounts/profile.html:4
+msgid "Change password"
+msgstr ""
+
+#: templates/accounts/register.html:3
+msgid "Create account"
+msgstr ""
+
+#: templates/accounts/register.html:4
+msgid "Already have an account?"
+msgstr ""
+
+#: templates/admin/stats.html:4
+msgid "Statistics"
+msgstr ""
+
+#: templates/admin/stats.html:6
+msgid "Users"
+msgstr ""
+
+#: templates/admin/stats.html:7 templates/dealerships/detail.html:6
+msgid "Listings"
+msgstr ""
+
+#: templates/admin/stats.html:12
+msgid "Open reports"
+msgstr ""
+
+#: templates/admin/stats.html:13 templates/base.html:24
+#: templates/dealerships/list.html:2 templates/home.html:32
+#: templates/home.html:51
+msgid "Dealerships"
+msgstr ""
+
+#: templates/admin/stats.html:15
+msgid "Top brands"
+msgstr ""
+
+#: templates/base.html:6 templates/base.html:8
+msgid ""
+"Buy and sell cars in Albania. Find the best offers and publish your car."
+msgstr ""
+
+#: templates/base.html:19
+msgid "Menu"
+msgstr ""
+
+#: templates/base.html:20
+msgid "Main navigation"
+msgstr ""
+
+#: templates/base.html:21
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:22
+msgid "Browse cars"
+msgstr ""
+
+#: templates/base.html:23 templates/cars/form.html:3
+#: templates/dashboard/index.html:3 templates/home.html:26
+#: templates/home.html:45 templates/home.html:58 templates/home.html:59
+msgid "Sell your car"
+msgstr ""
+
+#: templates/base.html:25 templates/dashboard/favorites.html:2
+#: templates/dashboard/index.html:4
+msgid "Favorites"
+msgstr ""
+
+#: templates/base.html:27 templates/dashboard/index.html:3
+msgid "My account"
+msgstr ""
+
+#: templates/base.html:28
+msgid "Log out"
+msgstr ""
+
+#: templates/base.html:42
+msgid "Buy and sell cars in Albania."
+msgstr ""
+
+#: templates/base.html:43
+msgid "Contact"
+msgstr ""
+
+#: templates/base.html:44
+msgid "Legal"
+msgstr ""
+
+#: templates/base.html:44 templates/legal.html:3
+msgid "Terms of use"
+msgstr ""
+
+#: templates/base.html:44 templates/legal.html:5
+msgid "Privacy policy"
+msgstr ""
+
+#: templates/cars/compare.html:2
+msgid "Compare cars"
+msgstr ""
+
+#: templates/cars/compare.html:12
+msgid "Pick up to three cars to compare."
+msgstr ""
+
+#: templates/cars/detail.html:21
+msgid "Call seller"
+msgstr ""
+
+#: templates/cars/detail.html:22
+msgid "Contact on WhatsApp"
+msgstr ""
+
+#: templates/cars/detail.html:23
+msgid "Remove from favorites"
+msgstr ""
+
+#: templates/cars/detail.html:24 templates/dashboard/favorites.html:4
+msgid "Compare"
+msgstr ""
+
+#: templates/cars/detail.html:25
+msgid "Share listing"
+msgstr ""
+
+#: templates/cars/detail.html:27 templates/dashboard/index.html:7
+msgid "Edit"
+msgstr ""
+
+#: templates/cars/detail.html:29
+msgid "Seller"
+msgstr ""
+
+#: templates/cars/detail.html:32
+msgid "Similar cars"
+msgstr ""
+
+#: templates/cars/form.html:3
+msgid "Edit listing"
+msgstr ""
+
+#: templates/cars/form.html:8
+msgid "Only JPG, PNG or WebP images up to 5 MB are allowed."
+msgstr ""
+
+#: templates/cars/form.html:9
+msgid "JPG, PNG or WebP, up to 5 MB each. The first photo is the main photo."
+msgstr ""
+
+#: templates/cars/form.html:11
+msgid "Current photos"
+msgstr ""
+
+#: templates/cars/form.html:12
+msgid "Main photo"
+msgstr ""
+
+#: templates/cars/form.html:12
+msgid "Make main"
+msgstr ""
+
+#: templates/cars/form.html:13 templates/dashboard/index.html:9
+msgid "Delete"
+msgstr ""
+
+#: templates/cars/form.html:14
+msgid "Preview"
+msgstr ""
+
+#: templates/cars/form.html:14
+msgid "Publish"
+msgstr ""
+
+#: templates/cars/list.html:3
+msgid "Filters"
+msgstr ""
+
+#: templates/cars/list.html:5
+msgid "Search"
+msgstr ""
+
+#: templates/cars/list.html:6
+msgid "All"
+msgstr ""
+
+#: templates/cars/list.html:8 templates/cars/list.html:13
+msgid "Min"
+msgstr ""
+
+#: templates/cars/list.html:8 templates/cars/list.html:13
+msgid "Max"
+msgstr ""
+
+#: templates/cars/list.html:9
+msgid "From"
+msgstr ""
+
+#: templates/cars/list.html:9
+msgid "To"
+msgstr ""
+
+#: templates/cars/list.html:10
+msgid "Max mileage (km)"
+msgstr ""
+
+#: templates/cars/list.html:14
+msgid "Min power (hp)"
+msgstr ""
+
+#: templates/cars/list.html:19
+msgid "Sort by"
+msgstr ""
+
+#: templates/cars/list.html:20
+msgid "Apply filters"
+msgstr ""
+
+#: templates/cars/list.html:20 templates/cars/list.html:23
+msgid "Reset"
+msgstr ""
+
+#: templates/cars/list.html:23
+msgid "No cars match your filters."
+msgstr ""
+
+#: templates/dashboard/favorites.html:5
+msgid "No saved cars yet."
+msgstr ""
+
+#: templates/dashboard/index.html:4
+msgid "My listings"
+msgstr ""
+
+#: templates/dashboard/index.html:4
+msgid "Total views"
+msgstr ""
+
+#: templates/dashboard/index.html:5
+msgid "Listing"
+msgstr ""
+
+#: templates/dashboard/index.html:5
+msgid "Status"
+msgstr ""
+
+#: templates/dashboard/index.html:5
+msgid "Views"
+msgstr ""
+
+#: templates/dashboard/index.html:8
+msgid "Mark as sold"
+msgstr ""
+
+#: templates/dashboard/index.html:9
+msgid "Delete this listing?"
+msgstr ""
+
+#: templates/dashboard/index.html:10
+msgid "You have no listings yet."
+msgstr ""
+
+#: templates/dealerships/detail.html:4 templates/dealerships/form.html:2
+msgid "Edit dealership"
+msgstr ""
+
+#: templates/dealerships/detail.html:7
+msgid "No listings yet."
+msgstr ""
+
+#: templates/dealerships/form.html:2 templates/dealerships/list.html:2
+msgid "Register a dealership"
+msgstr ""
+
+#: templates/dealerships/list.html:3
+msgid "No dealerships yet."
+msgstr ""
+
+#: templates/home.html:10
+msgid "Find the car of your dreams."
+msgstr ""
+
+#: templates/home.html:11
+msgid ""
+"Browse cars for sale, compare prices and find the right offer. Publish your "
+"car and find the buyer."
+msgstr ""
+
+#: templates/home.html:13 templates/home.html:23
+msgid "Active listings"
+msgstr ""
+
+#: templates/home.html:25 templates/home.html:26
+msgid "Newest listing"
+msgstr ""
+
+#: templates/home.html:33
+msgid "Brands"
+msgstr ""
+
+#: templates/home.html:34
+msgid "New today"
+msgstr ""
+
+#: templates/home.html:37
+msgid "Most searched brands"
+msgstr ""
+
+#: templates/home.html:42
+msgid "VIP cars"
+msgstr ""
+
+#: templates/home.html:44
+msgid "Latest listings"
+msgstr ""
+
+#: templates/home.html:44 templates/home.html:51
+msgid "See all"
+msgstr ""
+
+#: templates/home.html:45
+msgid "No listings yet. Be the first to publish a car."
+msgstr ""
+
+#: templates/home.html:47
+msgid "Recommended"
+msgstr ""
+
+#: templates/home.html:49
+msgid "Partner ads"
+msgstr ""
+
+#: templates/home.html:53
+msgid "How it works"
+msgstr ""
+
+#: templates/home.html:54
+msgid "Create an account"
+msgstr ""
+
+#: templates/home.html:54
+msgid "Sign up for free in less than a minute."
+msgstr ""
+
+#: templates/home.html:55
+msgid "Publish your car"
+msgstr ""
+
+#: templates/home.html:55
+msgid "Add details and photos. Your listing goes live after review."
+msgstr ""
+
+#: templates/home.html:56
+msgid "Get contacted"
+msgstr ""
+
+#: templates/home.html:56
+msgid "Buyers call you or message you on WhatsApp."
+msgstr ""
+
+#: templates/home.html:58
+msgid "Ready to sell your car?"
+msgstr ""
+
+#: templates/home.html:58
+msgid "Publish your listing in minutes. It's free."
+msgstr ""
+
+#: templates/legal.html:4
+msgid ""
+"By using AutoMarket.al you agree to publish only accurate listings for "
+"vehicles you are entitled to sell. Listings may be rejected or removed by "
+"the administrators. AutoMarket.al is a marketplace and is not a party to any "
+"sale."
+msgstr ""
+
+#: templates/legal.html:6
+msgid ""
+"We store the account and listing data you provide in order to operate the "
+"marketplace. Phone numbers you add to a listing are visible to visitors. We "
+"do not sell your personal data."
+msgstr ""
+
+#: templates/legal.html:7
+msgid ""
+"This text is a placeholder and must be reviewed by a lawyer before launch."
+msgstr ""

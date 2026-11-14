@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="form-card" style="max-width:480px"><h1>{{ title|default:_("Account") }}</h1>
+<form method="post" novalidate>{% csrf_token %}{{ form.non_field_errors }}{% for f in form %}{% include "_field.html" %}{% endfor %}<p><button class="btn">{{ submit|default:_("Save") }}</button></p></form></div>{% endblock %}

@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="form-card" style="max-width:520px"><h1>{% trans "Profile" %}</h1>
+<form method="post" novalidate>{% csrf_token %}{% for f in uf %}{% include "_field.html" %}{% endfor %}{% for f in pf %}{% include "_field.html" %}{% endfor %}<p><button class="btn">{% trans "Save changes" %}</button></p></form>
+<p><a href="{% url 'accounts:password_change' %}">{% trans "Change password" %}</a></p></div>{% endblock %}

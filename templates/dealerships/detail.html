@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="wrap" style="padding:36px 20px">
+<h1>{{ d.name }}</h1>{% if d.is_verified %}<p class="verified">✓ {% trans "Verified dealership" %}</p>{% endif %}
+{% if user in d.users.all %}<p><a class="btn sm ghost" href="{% url 'dealerships:edit' d.slug %}">{% trans "Edit dealership" %}</a></p>{% endif %}
+<p>{{ d.description|linebreaksbr }}</p><p>{{ d.city }}{% if d.address %}, {{ d.address }}{% endif %}<br><a href="tel:{{ d.phone }}">{{ d.phone }}</a>{% if d.email %} · {{ d.email }}{% endif %}</p>
+<h2>{% trans "Listings" %}</h2>
+{% if page %}<div class="grid">{% for car in page %}{% include "_card.html" %}{% endfor %}</div>{% include "_pager.html" %}{% else %}<div class="empty">{% trans "No listings yet." %}</div>{% endif %}</div>{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="wrap" style="padding:36px 20px">
+<div class="block-head"><h1>{% trans "My account" %}</h1><span><a class="btn sm" href="{% url 'cars:create' %}">{% trans "Sell your car" %}</a> <a class="btn sm ghost" href="{% url 'accounts:profile' %}">{% trans "Profile" %}</a></span></div>
+<div class="stats"><div><b>{{ cars|length }}</b>{% trans "My listings" %}</div><div><b>{{ total_views }}</b>{% trans "Total views" %}</div><div><b>{{ favorites|length }}</b>{% trans "Favorites" %}</div></div>
+{% if cars %}<div class="table-wrap"><table class="table"><tr><th>{% trans "Listing" %}</th><th>{% trans "Price (€)" %}</th><th>{% trans "Status" %}</th><th>{% trans "Views" %}</th><th></th></tr>
+{% for car in cars %}<tr><td><a href="{{ car.get_absolute_url }}">{{ car.title }}</a></td><td>€{{ car.price|floatformat:0 }}</td><td>{{ car.get_status_display }}</td><td>{{ car.views }}</td>
+<td style="white-space:nowrap"><a class="btn sm ghost" href="{% url 'cars:edit' car.slug %}">{% trans "Edit" %}</a>
+{% if car.status != 'sold' %}<form method="post" action="{% url 'cars:sold' car.slug %}" style="display:inline">{% csrf_token %}<button class="btn sm dark">{% trans "Mark as sold" %}</button></form>{% endif %}
+<form method="post" action="{% url 'cars:delete' car.slug %}" style="display:inline" data-confirm="{% trans 'Delete this listing?' %}">{% csrf_token %}<button class="btn sm danger">{% trans "Delete" %}</button></form></td></tr>{% endfor %}</table></div>
+{% else %}<div class="empty">{% trans "You have no listings yet." %}</div>{% endif %}</div>{% endblock %}

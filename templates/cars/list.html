@@ -1,0 +1,24 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="wrap layout">
+<aside class="filters"><details open><summary>{% trans "Filters" %}</summary>
+<form method="get">
+<label>{% trans "Search" %}</label><input name="q" value="{{ form.q.value|default:'' }}">
+<label>{% trans "Brand" %}</label><select name="brand"><option value="">{% trans "All" %}</option>{% for b in brands %}<option value="{{ b.slug }}" {% if form.brand.value == b.slug %}selected{% endif %}>{{ b.name }}</option>{% endfor %}</select>
+<label>{% trans "Model" %}</label><input name="model" value="{{ form.model.value|default:'' }}">
+<label>{% trans "Price (€)" %}</label><div class="row2"><input type="number" name="price_min" placeholder="{% trans 'Min' %}" value="{{ form.price_min.value|default:'' }}"><input type="number" name="price_max" placeholder="{% trans 'Max' %}" value="{{ form.price_max.value|default:'' }}"></div>
+<label>{% trans "Year" %}</label><div class="row2"><input type="number" name="year_min" placeholder="{% trans 'From' %}" value="{{ form.year_min.value|default:'' }}"><input type="number" name="year_max" placeholder="{% trans 'To' %}" value="{{ form.year_max.value|default:'' }}"></div>
+<label>{% trans "Max mileage (km)" %}</label><input type="number" name="km_max" value="{{ form.km_max.value|default:'' }}">
+<label>{% trans "Fuel" %}</label>{{ form.fuel }}
+<label>{% trans "Transmission" %}</label>{{ form.transmission }}
+<label>{% trans "Engine size (cc)" %}</label><div class="row2"><input type="number" name="cc_min" placeholder="{% trans 'Min' %}" value="{{ form.cc_min.value|default:'' }}"><input type="number" name="cc_max" placeholder="{% trans 'Max' %}" value="{{ form.cc_max.value|default:'' }}"></div>
+<label>{% trans "Min power (hp)" %}</label><input type="number" name="hp_min" value="{{ form.hp_min.value|default:'' }}">
+<label>{% trans "Body type" %}</label>{{ form.body_type }}
+<label>{% trans "Color" %}</label><input name="color" value="{{ form.color.value|default:'' }}">
+<label>{% trans "City" %}</label><input name="city" value="{{ form.city.value|default:'' }}">
+<label>{% trans "Condition" %}</label>{{ form.condition }}
+<label>{% trans "Sort by" %}</label><select name="sort">{% for v,l in sorts %}<option value="{{ v }}" {% if form.sort.value == v %}selected{% endif %}>{{ l }}</option>{% endfor %}</select>
+<p style="display:flex;gap:8px;margin-top:16px"><button class="btn">{% trans "Apply filters" %}</button><a class="btn ghost" href="{% url 'cars:list' %}">{% trans "Reset" %}</a></p>
+</form></details></aside>
+<section><h1>{% trans "Cars for sale" %} <small style="font-size:1rem;color:var(--muted)">({{ page.paginator.count }})</small></h1>
+{% if page %}<div class="grid">{% for car in page %}{% include "_card.html" %}{% endfor %}</div>{% include "_pager.html" %}{% else %}<div class="empty">{% trans "No cars match your filters." %}<p><a class="btn ghost" href="{% url 'cars:list' %}">{% trans "Reset" %}</a></p></div>{% endif %}</section>
+</div>{% endblock %}

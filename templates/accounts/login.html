@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="form-card" style="max-width:480px"><h1>{% trans "Log in" %}</h1>
+<form method="post" novalidate>{% csrf_token %}{{ form.non_field_errors }}{% for f in form %}{% include "_field.html" %}{% endfor %}<input type="hidden" name="next" value="{{ next }}">
+<p><button class="btn">{% trans "Log in" %}</button></p></form>
+<p><a href="{% url 'accounts:password_reset' %}">{% trans "Forgot your password?" %}</a> · <a href="{% url 'accounts:register' %}">{% trans "Sign up" %}</a></p></div>{% endblock %}

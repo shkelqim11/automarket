@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="wrap" style="padding:36px 20px"><h1>{% trans "Compare cars" %}</h1>
+{% if cars %}<div class="table-wrap"><table class="table"><tr><th></th>{% for c in cars %}<th><a href="{{ c.get_absolute_url }}">{{ c.brand.name }} {{ c.model }}</a></th>{% endfor %}</tr>
+<tr><th>{% trans "Price (€)" %}</th>{% for c in cars %}<td>€{{ c.price|floatformat:0 }}</td>{% endfor %}</tr>
+<tr><th>{% trans "Year" %}</th>{% for c in cars %}<td>{{ c.year }}</td>{% endfor %}</tr>
+<tr><th>{% trans "Mileage (km)" %}</th>{% for c in cars %}<td>{{ c.mileage }}</td>{% endfor %}</tr>
+<tr><th>{% trans "Fuel" %}</th>{% for c in cars %}<td>{{ c.get_fuel_display }}</td>{% endfor %}</tr>
+<tr><th>{% trans "Transmission" %}</th>{% for c in cars %}<td>{{ c.get_transmission_display }}</td>{% endfor %}</tr>
+<tr><th>{% trans "Engine size (cc)" %}</th>{% for c in cars %}<td>{{ c.engine_cc|default:"–" }}</td>{% endfor %}</tr>
+<tr><th>{% trans "Power (hp)" %}</th>{% for c in cars %}<td>{{ c.power_hp|default:"–" }}</td>{% endfor %}</tr>
+<tr><th>{% trans "Body type" %}</th>{% for c in cars %}<td>{{ c.get_body_type_display }}</td>{% endfor %}</tr></table></div>
+{% else %}<div class="empty">{% trans "Pick up to three cars to compare." %}</div>{% endif %}</div>{% endblock %}

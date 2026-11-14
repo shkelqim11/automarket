@@ -1,0 +1,17 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block content %}
+<h1>{% trans "Statistics" %}</h1>
+<table>
+<tr><th>{% trans "Users" %}</th><td>{{ users }}</td></tr>
+<tr><th>{% trans "Listings" %}</th><td>{{ cars }}</td></tr>
+<tr><th>{% trans "Pending" %}</th><td>{{ pending }}</td></tr>
+<tr><th>{% trans "Published" %}</th><td>{{ published }}</td></tr>
+<tr><th>{% trans "Sold" %}</th><td>{{ sold }}</td></tr>
+<tr><th>VIP</th><td>{{ vip }}</td></tr>
+<tr><th>{% trans "Open reports" %}</th><td>{{ open_reports }}</td></tr>
+<tr><th>{% trans "Dealerships" %}</th><td>{{ dealerships }}</td></tr>
+</table>
+<h2>{% trans "Top brands" %}</h2>
+<ul>{% for b in top_brands %}<li>{{ b.brand__name }} — {{ b.n }}</li>{% endfor %}</ul>
+{% endblock %}

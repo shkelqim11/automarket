@@ -1,0 +1,14 @@
+{% load i18n %}
+<article class="card">
+  {% if car.is_vip %}<span class="badge">VIP</span>{% elif car.status == 'sold' %}<span class="badge sold">{% trans "Sold" %}</span>{% elif car.status == 'pending' %}<span class="badge pending">{% trans "Pending" %}</span>{% endif %}
+  {% if user.is_authenticated and car.status == 'published' %}
+  <form class="fav-form" method="post" action="{% url 'favorites:toggle' car.pk %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}">
+    <button class="{% if car.pk in fav_ids %}on{% endif %}" aria-label="{% trans 'Save to favorites' %}">{% if car.pk in fav_ids %}♥{% else %}♡{% endif %}</button></form>
+  {% endif %}
+  <div class="ph">{% if car.main_image %}<img src="{{ car.main_image.image.url }}" alt="{{ car.title }}" loading="lazy" width="400" height="300">{% endif %}</div>
+  <div class="body">
+    <h3><a href="{{ car.get_absolute_url }}">{{ car.brand.name }} {{ car.model }}</a></h3>
+    <div class="price">€{{ car.price|floatformat:0 }}</div>
+    <div class="meta"><span>{{ car.year }}</span><span>{{ car.mileage }} km</span><span>{{ car.get_fuel_display }}</span><span>{{ car.city }}</span></div>
+  </div>
+</article>

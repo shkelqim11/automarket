@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="wrap" style="max-width:760px;padding:40px 20px">
+{% if kind == 'terms' %}<h1>{% trans "Terms of use" %}</h1>
+<p>{% trans "By using AutoMarket.al you agree to publish only accurate listings for vehicles you are entitled to sell. Listings may be rejected or removed by the administrators. AutoMarket.al is a marketplace and is not a party to any sale." %}</p>
+{% else %}<h1>{% trans "Privacy policy" %}</h1>
+<p>{% trans "We store the account and listing data you provide in order to operate the marketplace. Phone numbers you add to a listing are visible to visitors. We do not sell your personal data." %}</p>{% endif %}
+<p class="help">{% trans "This text is a placeholder and must be reviewed by a lawyer before launch." %}</p></div>{% endblock %}

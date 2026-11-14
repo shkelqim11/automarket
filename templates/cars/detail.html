@@ -1,0 +1,32 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="wrap detail">
+<div>
+ <div class="gallery">{% if car.main_image %}<div class="main"><img src="{{ car.main_image.image.url }}" alt="{{ car.title }}"></div>
+ {% if car.images.all|length > 1 %}<div class="thumbs">{% for i in car.images.all %}<img src="{{ i.image.url }}" data-full="{{ i.image.url }}" alt="" loading="lazy" class="{% if i.is_main %}active{% endif %}">{% endfor %}</div>{% endif %}{% else %}<div class="main"></div>{% endif %}</div>
+ <h2 style="margin-top:22px">{% trans "Description" %}</h2><p>{{ car.description|linebreaksbr }}</p>
+ {% if car.equipment_list %}<h2>{% trans "Equipment" %}</h2><ul>{% for e in car.equipment_list %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+</div>
+<aside><div class="panel">
+ {% if car.status != 'published' %}<p><span class="badge" style="position:static">{{ car.get_status_display }}</span></p>{% endif %}
+ <h1 style="font-size:1.5rem">{{ car.brand.name }} {{ car.model }} {{ car.version }}</h1><div class="price">€{{ car.price|floatformat:0 }}</div>
+ <dl class="specs">
+  <div><dt>{% trans "Year" %}</dt><dd>{{ car.year }}</dd></div><div><dt>{% trans "Mileage (km)" %}</dt><dd>{{ car.mileage }} km</dd></div>
+  <div><dt>{% trans "Fuel" %}</dt><dd>{{ car.get_fuel_display }}</dd></div><div><dt>{% trans "Transmission" %}</dt><dd>{{ car.get_transmission_display }}</dd></div>
+  {% if car.engine_cc %}<div><dt>{% trans "Engine size (cc)" %}</dt><dd>{{ car.engine_cc }} cc</dd></div>{% endif %}{% if car.power_hp %}<div><dt>{% trans "Power (hp)" %}</dt><dd>{{ car.power_hp }} hp</dd></div>{% endif %}
+  <div><dt>{% trans "Body type" %}</dt><dd>{{ car.get_body_type_display }}</dd></div><div><dt>{% trans "Color" %}</dt><dd>{{ car.color }}</dd></div>
+  <div><dt>{% trans "Condition" %}</dt><dd>{{ car.get_condition_display }}</dd></div><div><dt>{% trans "Import status" %}</dt><dd>{{ car.get_import_status_display }}</dd></div>
+  <div><dt>{% trans "City" %}</dt><dd>{{ car.city }}</dd></div><div><dt>{% trans "Published" %}</dt><dd>{{ car.created_at|date:"d.m.Y" }}</dd></div>
+ </dl>
+ <div class="stack">
+  <a class="btn" href="tel:{{ car.phone }}">{% trans "Call seller" %}: {{ car.phone }}</a>
+  <a class="btn dark" href="https://wa.me/{{ car.whatsapp_digits }}" target="_blank" rel="noopener">{% trans "Contact on WhatsApp" %}</a>
+  {% if user.is_authenticated and car.status == 'published' %}<form method="post" action="{% url 'favorites:toggle' car.pk %}">{% csrf_token %}<button class="btn ghost" style="width:100%">{% if car.pk in fav_ids %}{% trans "Remove from favorites" %}{% else %}{% trans "Save to favorites" %}{% endif %}</button></form>{% endif %}
+  <a class="btn ghost" href="{% url 'cars:compare' %}?id={{ car.pk }}">{% trans "Compare" %}</a>
+  <button class="btn ghost" type="button" data-share>{% trans "Share listing" %}</button>
+  <a href="{% url 'reports:create' car.slug %}">{% trans "Report listing" %}</a>
+  {% if user == car.owner %}<a class="btn sm" href="{% url 'cars:edit' car.slug %}">{% trans "Edit" %}</a>{% endif %}
+ </div>
+ <hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>{% trans "Seller" %}</h3>
+ {% if car.dealership %}<p><a href="{{ car.dealership.get_absolute_url }}">{{ car.dealership.name }}</a>{% if car.dealership.is_verified %} <span class="verified">✓ {% trans "Verified dealership" %}</span>{% endif %}</p>{% else %}<p>{{ car.owner.first_name|default:car.owner.username }}</p>{% endif %}
+</div></aside></div>
+{% if similar %}<div class="wrap"><h2>{% trans "Similar cars" %}</h2><div class="grid">{% for car in similar %}{% include "_card.html" %}{% endfor %}</div></div>{% endif %}{% endblock %}

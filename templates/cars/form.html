@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="form-card">
+<h1>{% if mode == 'edit' %}{% trans "Edit listing" %}{% else %}{% trans "Sell your car" %}{% endif %}</h1>
+<form method="post" enctype="multipart/form-data" novalidate>{% csrf_token %}{{ form.non_field_errors }}
+<div class="form-grid">
+{% for f in form %}{% if f.name != 'images' %}{% include "_field.html" with wide=f.field.widget.input_type|default:'' %}{% endif %}{% endfor %}
+<div class="full"><label for="id_images">{{ form.images.label }}</label>
+<input type="file" name="images" id="id_images" multiple accept="image/jpeg,image/png,image/webp" data-max-mb="5" data-msg="{% trans 'Only JPG, PNG or WebP images up to 5 MB are allowed.' %}">
+<span class="help">{% trans "JPG, PNG or WebP, up to 5 MB each. The first photo is the main photo." %}</span>
+<div id="img-error" class="errorlist"></div>{{ form.images.errors }}<div class="previews" id="previews"></div></div></div>
+{% if car %}<h3>{% trans "Current photos" %}</h3><div class="photo-edit">{% for i in car.images.all %}<figure><img src="{{ i.image.url }}" alt="">
+ {% if i.is_main %}<small class="verified">{% trans "Main photo" %}</small>{% else %}<button class="btn sm ghost" formmethod="post" formaction="{% url 'cars:image_main' i.pk %}" formnovalidate>{% trans "Make main" %}</button>{% endif %}
+ <button class="btn sm danger" formmethod="post" formaction="{% url 'cars:image_delete' i.pk %}" formnovalidate>{% trans "Delete" %}</button></figure>{% endfor %}</div>{% endif %}
+<p style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap"><button type="button" id="preview-btn" class="btn ghost">{% trans "Preview" %}</button><button class="btn">{% if mode == 'edit' %}{% trans "Save changes" %}{% else %}{% trans "Publish" %}{% endif %}</button></p>
+</form>
+<section id="preview" hidden class="card" style="margin-top:20px"><div class="ph"><img id="pv-img" alt=""></div><div class="body"><h3 id="pv-title"></h3><div class="price" id="pv-price"></div><div class="meta" id="pv-meta"></div><p id="pv-desc"></p></div></section>
+</div>{% endblock %}

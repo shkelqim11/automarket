@@ -1,0 +1,913 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-14 09:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/accounts/forms.py:10
+msgid "Email"
+msgstr "Email"
+
+#: apps/accounts/forms.py:17
+msgid "This email is already registered."
+msgstr "Ky email është i regjistruar tashmë."
+
+#: apps/accounts/models.py:9 apps/cars/models.py:84
+#: apps/dealerships/models.py:14
+msgid "Phone number"
+msgstr "Numri i telefonit"
+
+#: apps/accounts/models.py:10 apps/cars/models.py:80
+#: apps/dealerships/models.py:12 templates/cars/detail.html:18
+#: templates/cars/list.html:17
+msgid "City"
+msgstr "Qyteti"
+
+#: apps/accounts/views.py:18 apps/reports/views.py:20
+msgid "Too many requests. Please try again later."
+msgstr "Shumë kërkesa. Provo përsëri më vonë."
+
+#: apps/accounts/views.py:24
+msgid "Welcome to AutoMarket.al!"
+msgstr "Mirë se erdhe në AutoMarket.al!"
+
+#: apps/accounts/views.py:42
+msgid "Profile updated."
+msgstr "Profili u përditësua."
+
+#: apps/accounts/views.py:62
+msgid "Too many attempts. Try again in 15 minutes."
+msgstr "Shumë tentativa. Provo përsëri pas 15 minutash."
+
+#: apps/cars/forms.py:27
+#, python-format
+msgid "Each image must be smaller than %(mb)s MB."
+msgstr "Çdo fotografi duhet të jetë më e vogël se %(mb)s MB."
+
+#: apps/cars/forms.py:31 apps/cars/forms.py:37
+msgid "Invalid image file."
+msgstr "Skedar imazhi i pavlefshëm."
+
+#: apps/cars/forms.py:39
+msgid "Only JPG, PNG or WebP images are allowed."
+msgstr "Lejohen vetëm imazhe JPG, PNG ose WebP."
+
+#: apps/cars/forms.py:44
+msgid "Photos"
+msgstr "Fotografitë"
+
+#: apps/cars/forms.py:45 apps/cars/models.py:82 apps/dealerships/models.py:11
+#: templates/cars/detail.html:6
+msgid "Description"
+msgstr "Përshkrimi"
+
+#: apps/cars/forms.py:46 apps/cars/models.py:83 templates/cars/detail.html:7
+msgid "Equipment"
+msgstr "Pajisjet"
+
+#: apps/cars/forms.py:46 apps/cars/models.py:83
+msgid "One item per line"
+msgstr "Një pajisje për rresht"
+
+#: apps/cars/forms.py:47
+msgid "Other brand (if not listed)"
+msgstr "Markë tjetër (nëse nuk është në listë)"
+
+#: apps/cars/forms.py:65
+msgid "Invalid brand name."
+msgstr "Emër marke i pavlefshëm."
+
+#: apps/cars/forms.py:71
+msgid "Enter a valid year."
+msgstr "Vendos një vit të vlefshëm."
+
+#: apps/cars/forms.py:78
+msgid "Enter a valid phone number."
+msgstr "Vendos një numër telefoni të vlefshëm."
+
+#: apps/cars/forms.py:84
+#, python-format
+msgid "You can upload at most %(n)s photos."
+msgstr "Mund të ngarkosh maksimumi %(n)s fotografi."
+
+#: apps/cars/forms.py:99
+msgid "Choose a brand or type it in the other brand field."
+msgstr "Zgjidh një markë ose shkruaje te fusha \"Markë tjetër\"."
+
+#: apps/cars/forms.py:101
+msgid "Add at least one photo."
+msgstr "Shto të paktën një fotografi."
+
+#: apps/cars/models.py:11 apps/cars/models.py:65 templates/cars/list.html:6
+msgid "Brand"
+msgstr "Marka"
+
+#: apps/cars/models.py:31 templates/_card.html:3 templates/admin/stats.html:8
+msgid "Pending"
+msgstr "Në pritje"
+
+#: apps/cars/models.py:32 templates/admin/stats.html:9
+#: templates/cars/detail.html:18
+msgid "Published"
+msgstr "Publikuar"
+
+#: apps/cars/models.py:33
+msgid "Rejected"
+msgstr "Refuzuar"
+
+#: apps/cars/models.py:34 templates/_card.html:3 templates/admin/stats.html:10
+msgid "Sold"
+msgstr "Shitur"
+
+#: apps/cars/models.py:36
+msgid "Petrol"
+msgstr "Benzinë"
+
+#: apps/cars/models.py:37
+msgid "Diesel"
+msgstr "Naftë"
+
+#: apps/cars/models.py:38
+msgid "Hybrid"
+msgstr "Hibrid"
+
+#: apps/cars/models.py:39
+msgid "Electric"
+msgstr "Elektrik"
+
+#: apps/cars/models.py:40
+msgid "LPG"
+msgstr "GPL"
+
+#: apps/cars/models.py:42
+msgid "Manual"
+msgstr "Manual"
+
+#: apps/cars/models.py:43
+msgid "Automatic"
+msgstr "Automatik"
+
+#: apps/cars/models.py:45
+msgid "Sedan"
+msgstr "Sedan"
+
+#: apps/cars/models.py:46
+msgid "Hatchback"
+msgstr "Hatchback"
+
+#: apps/cars/models.py:47
+msgid "SUV"
+msgstr "SUV"
+
+#: apps/cars/models.py:48
+msgid "Wagon"
+msgstr "Karavan"
+
+#: apps/cars/models.py:49
+msgid "Coupe"
+msgstr "Kupe"
+
+#: apps/cars/models.py:50
+msgid "Convertible"
+msgstr "Kabriolet"
+
+#: apps/cars/models.py:51
+msgid "Van"
+msgstr "Furgon"
+
+#: apps/cars/models.py:52
+msgid "Pickup"
+msgstr "Pikap"
+
+#: apps/cars/models.py:54
+msgid "New"
+msgstr "E re"
+
+#: apps/cars/models.py:55
+msgid "Used"
+msgstr "E përdorur"
+
+#: apps/cars/models.py:56
+msgid "Damaged"
+msgstr "E dëmtuar"
+
+#: apps/cars/models.py:58
+msgid "Imported"
+msgstr "E importuar"
+
+#: apps/cars/models.py:59
+msgid "Not imported"
+msgstr "Jo e importuar"
+
+#: apps/cars/models.py:60
+msgid "Customs paid"
+msgstr "Doganuar"
+
+#: apps/cars/models.py:66 templates/cars/list.html:7
+msgid "Model"
+msgstr "Modeli"
+
+#: apps/cars/models.py:67
+msgid "Version"
+msgstr "Versioni"
+
+#: apps/cars/models.py:68 apps/cars/views.py:41 templates/cars/compare.html:5
+#: templates/cars/detail.html:13 templates/cars/list.html:9
+msgid "Year"
+msgstr "Viti"
+
+#: apps/cars/models.py:69 templates/cars/compare.html:4
+#: templates/cars/list.html:8 templates/dashboard/index.html:5
+msgid "Price (€)"
+msgstr "Çmimi (€)"
+
+#: apps/cars/models.py:70 templates/cars/compare.html:6
+#: templates/cars/detail.html:13
+msgid "Mileage (km)"
+msgstr "Kilometrat (km)"
+
+#: apps/cars/models.py:71 templates/cars/compare.html:7
+#: templates/cars/detail.html:14 templates/cars/list.html:11
+msgid "Fuel"
+msgstr "Karburanti"
+
+#: apps/cars/models.py:72 templates/cars/compare.html:8
+#: templates/cars/detail.html:14 templates/cars/list.html:12
+msgid "Transmission"
+msgstr "Kambio"
+
+#: apps/cars/models.py:73 templates/cars/compare.html:9
+#: templates/cars/detail.html:15 templates/cars/list.html:13
+msgid "Engine size (cc)"
+msgstr "Kubikazhi (cc)"
+
+#: apps/cars/models.py:74 templates/cars/compare.html:10
+#: templates/cars/detail.html:15
+msgid "Power (hp)"
+msgstr "Fuqia (hp)"
+
+#: apps/cars/models.py:75 templates/cars/compare.html:11
+#: templates/cars/detail.html:16 templates/cars/list.html:15
+msgid "Body type"
+msgstr "Tipi i karrocerisë"
+
+#: apps/cars/models.py:76 templates/cars/detail.html:16
+#: templates/cars/list.html:16
+msgid "Color"
+msgstr "Ngjyra"
+
+#: apps/cars/models.py:77 templates/cars/detail.html:17
+#: templates/cars/list.html:18
+msgid "Condition"
+msgstr "Gjendja"
+
+#: apps/cars/models.py:78
+msgid "Origin"
+msgstr "Origjina"
+
+#: apps/cars/models.py:79 templates/cars/detail.html:17
+msgid "Import status"
+msgstr "Statusi i importit"
+
+#: apps/cars/models.py:81
+msgid "Listing title"
+msgstr "Titulli i njoftimit"
+
+#: apps/cars/models.py:85
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: apps/cars/views.py:41
+msgid "Newest"
+msgstr "Më të rejat"
+
+#: apps/cars/views.py:41
+msgid "Price: low to high"
+msgstr "Çmimi nga më i ulëti"
+
+#: apps/cars/views.py:41
+msgid "Price: high to low"
+msgstr "Çmimi nga më i larti"
+
+#: apps/cars/views.py:41
+msgid "Mileage"
+msgstr "Kilometrat"
+
+#: apps/cars/views.py:42 templates/cars/list.html:22
+msgid "Cars for sale"
+msgstr "Makina në shitje"
+
+#: apps/cars/views.py:69
+msgid "Daily listing limit reached. Try again tomorrow."
+msgstr "U arrit kufiri ditor i njoftimeve. Provo nesër."
+
+#: apps/cars/views.py:80
+msgid "Listing submitted for approval."
+msgstr "Njoftimi u dërgua për miratim."
+
+#: apps/cars/views.py:80
+msgid "Listing published."
+msgstr "Njoftimi u publikua."
+
+#: apps/cars/views.py:97
+msgid "Listing updated."
+msgstr "Njoftimi u përditësua."
+
+#: apps/cars/views.py:105
+msgid "Listing deleted."
+msgstr "Njoftimi u fshi."
+
+#: apps/cars/views.py:114
+msgid "Marked as sold."
+msgstr "U shënua si e shitur."
+
+#: apps/cars/views.py:125
+msgid "Photo deleted."
+msgstr "Fotografia u fshi."
+
+#: apps/core/models.py:6
+msgid "Require approval before publishing"
+msgstr "Kërko miratim para publikimit"
+
+#: apps/core/models.py:12 apps/core/models.py:13
+msgid "Site settings"
+msgstr "Cilësimet e faqes"
+
+#: apps/dealerships/models.py:8
+msgid "Name"
+msgstr "Emri"
+
+#: apps/dealerships/models.py:13
+msgid "Address"
+msgstr "Adresa"
+
+#: apps/dealerships/models.py:17 templates/cars/detail.html:30
+#: templates/dealerships/_card.html:3 templates/dealerships/detail.html:3
+msgid "Verified dealership"
+msgstr "Autosallon i verifikuar"
+
+#: apps/dealerships/models.py:41
+msgid "Basic"
+msgstr "Bazë"
+
+#: apps/dealerships/models.py:42
+msgid "Pro"
+msgstr "Pro"
+
+#: apps/dealerships/views.py:23
+#| msgid "Register a dealership"
+msgid "You can register at most 3 dealerships."
+msgstr "Mund të regjistrosh maksimumi 3 autosalone."
+
+#: apps/dealerships/views.py:29
+msgid ""
+"Dealership created. The verified badge is added by our team after checks."
+msgstr ""
+"Autosalloni u krijua. Shenja \"i verifikuar\" shtohet nga ekipi ynë pas "
+"verifikimit."
+
+#: apps/dealerships/views.py:41
+msgid "Dealership updated."
+msgstr "Autosalloni u përditësua."
+
+#: apps/favorites/views.py:22
+msgid "Removed from favorites."
+msgstr "U hoq nga favoritet."
+
+#: apps/favorites/views.py:24
+msgid "Saved to favorites."
+msgstr "U ruajt te favoritet."
+
+#: apps/reports/models.py:7
+msgid "Scam or fraud"
+msgstr "Mashtrim"
+
+#: apps/reports/models.py:8
+msgid "Wrong information"
+msgstr "Informacion i gabuar"
+
+#: apps/reports/models.py:9
+msgid "Duplicate listing"
+msgstr "Njoftim i përsëritur"
+
+#: apps/reports/models.py:10
+msgid "Already sold"
+msgstr "Tashmë e shitur"
+
+#: apps/reports/models.py:11
+msgid "Other"
+msgstr "Tjetër"
+
+#: apps/reports/models.py:14
+msgid "Reason"
+msgstr "Arsyeja"
+
+#: apps/reports/models.py:15
+msgid "Details"
+msgstr "Detaje"
+
+#: apps/reports/views.py:28
+msgid "Thank you. Our team will review the report."
+msgstr "Faleminderit. Ekipi ynë do ta shqyrtojë raportimin."
+
+#: apps/reports/views.py:30 templates/cars/detail.html:26
+msgid "Report listing"
+msgstr "Raporto njoftimin"
+
+#: apps/reports/views.py:30
+msgid "Send report"
+msgstr "Dërgo raportimin"
+
+#: templates/_card.html:6 templates/cars/detail.html:23
+msgid "Save to favorites"
+msgstr "Ruaj te Favoritet"
+
+#: templates/_pager.html:2
+msgid "Previous"
+msgstr "Para"
+
+#: templates/_pager.html:4
+msgid "Next"
+msgstr "Pas"
+
+#: templates/accounts/form_page.html:2
+msgid "Account"
+msgstr "Llogaria"
+
+#: templates/accounts/form_page.html:3 templates/dealerships/form.html:4
+msgid "Save"
+msgstr "Ruaj"
+
+#: templates/accounts/login.html:2 templates/accounts/login.html:4
+#: templates/accounts/register.html:4 templates/base.html:30
+msgid "Log in"
+msgstr "Hyr"
+
+#: templates/accounts/login.html:5
+msgid "Forgot your password?"
+msgstr "Harrove fjalëkalimin?"
+
+#: templates/accounts/login.html:5 templates/accounts/register.html:2
+#: templates/base.html:30
+msgid "Sign up"
+msgstr "Regjistrohu"
+
+#: templates/accounts/message_page.html:2
+msgid "Check your email"
+msgstr "Kontrollo email-in"
+
+#: templates/accounts/message_page.html:2
+msgid ""
+"If an account exists for that email, we have sent password reset "
+"instructions."
+msgstr ""
+"Nëse ekziston një llogari me këtë email, kemi dërguar udhëzimet për "
+"rivendosjen e fjalëkalimit."
+
+#: templates/accounts/password_reset_email.txt:1
+msgid "Reset your AutoMarket.al password:"
+msgstr "Rivendos fjalëkalimin e AutoMarket.al:"
+
+#: templates/accounts/profile.html:2 templates/dashboard/index.html:3
+msgid "Profile"
+msgstr "Profili"
+
+#: templates/accounts/profile.html:3 templates/cars/form.html:14
+msgid "Save changes"
+msgstr "Ruaj ndryshimet"
+
+#: templates/accounts/profile.html:4
+msgid "Change password"
+msgstr "Ndrysho fjalëkalimin"
+
+#: templates/accounts/register.html:3
+msgid "Create account"
+msgstr "Krijo llogari"
+
+#: templates/accounts/register.html:4
+msgid "Already have an account?"
+msgstr "Ke tashmë një llogari?"
+
+#: templates/admin/stats.html:4
+msgid "Statistics"
+msgstr "Statistikat"
+
+#: templates/admin/stats.html:6
+msgid "Users"
+msgstr "Përdorues"
+
+#: templates/admin/stats.html:7 templates/dealerships/detail.html:6
+msgid "Listings"
+msgstr "Njoftime"
+
+#: templates/admin/stats.html:12
+msgid "Open reports"
+msgstr "Raportime të hapura"
+
+#: templates/admin/stats.html:13 templates/base.html:24
+#: templates/dealerships/list.html:2 templates/home.html:32
+#: templates/home.html:51
+msgid "Dealerships"
+msgstr "Autosallonet"
+
+#: templates/admin/stats.html:15
+msgid "Top brands"
+msgstr "Markat kryesore"
+
+#: templates/base.html:6 templates/base.html:8
+msgid ""
+"Buy and sell cars in Albania. Find the best offers and publish your car."
+msgstr ""
+"Bli dhe shit makina në Shqipëri. Gjej ofertat më të mira dhe publiko makinën"
+" tënde."
+
+#: templates/base.html:19
+msgid "Menu"
+msgstr "Menu"
+
+#: templates/base.html:20
+msgid "Main navigation"
+msgstr "Navigimi kryesor"
+
+#: templates/base.html:21
+msgid "Home"
+msgstr "Kryefaqja"
+
+#: templates/base.html:22
+msgid "Browse cars"
+msgstr "Shiko makinat"
+
+#: templates/base.html:23 templates/cars/form.html:3
+#: templates/dashboard/index.html:3 templates/home.html:26
+#: templates/home.html:45 templates/home.html:58 templates/home.html:59
+msgid "Sell your car"
+msgstr "Shit makinën tënde"
+
+#: templates/base.html:25 templates/dashboard/favorites.html:2
+#: templates/dashboard/index.html:4
+msgid "Favorites"
+msgstr "Favoritet"
+
+#: templates/base.html:27 templates/dashboard/index.html:3
+msgid "My account"
+msgstr "Llogaria ime"
+
+#: templates/base.html:28
+msgid "Log out"
+msgstr "Dil"
+
+#: templates/base.html:42
+msgid "Buy and sell cars in Albania."
+msgstr "Bli dhe shit makina në Shqipëri."
+
+#: templates/base.html:43
+msgid "Contact"
+msgstr "Kontakt"
+
+#: templates/base.html:44
+msgid "Legal"
+msgstr "Informacion ligjor"
+
+#: templates/base.html:44 templates/legal.html:3
+msgid "Terms of use"
+msgstr "Kushtet e përdorimit"
+
+#: templates/base.html:44 templates/legal.html:5
+msgid "Privacy policy"
+msgstr "Politika e privatësisë"
+
+#: templates/cars/compare.html:2
+msgid "Compare cars"
+msgstr "Krahaso makinat"
+
+#: templates/cars/compare.html:12
+msgid "Pick up to three cars to compare."
+msgstr "Zgjidh deri në tri makina për krahasim."
+
+#: templates/cars/detail.html:21
+msgid "Call seller"
+msgstr "Telefono shitësin"
+
+#: templates/cars/detail.html:22
+msgid "Contact on WhatsApp"
+msgstr "Kontakto në WhatsApp"
+
+#: templates/cars/detail.html:23
+msgid "Remove from favorites"
+msgstr "Hiq nga favoritet"
+
+#: templates/cars/detail.html:24 templates/dashboard/favorites.html:4
+msgid "Compare"
+msgstr "Krahaso"
+
+#: templates/cars/detail.html:25
+msgid "Share listing"
+msgstr "Ndaj njoftimin"
+
+#: templates/cars/detail.html:27 templates/dashboard/index.html:7
+msgid "Edit"
+msgstr "Modifiko"
+
+#: templates/cars/detail.html:29
+msgid "Seller"
+msgstr "Shitësi"
+
+#: templates/cars/detail.html:32
+msgid "Similar cars"
+msgstr "Makina të ngjashme"
+
+#: templates/cars/form.html:3
+msgid "Edit listing"
+msgstr "Modifiko njoftimin"
+
+#: templates/cars/form.html:8
+msgid "Only JPG, PNG or WebP images up to 5 MB are allowed."
+msgstr "Lejohen vetëm imazhe JPG, PNG ose WebP deri në 5 MB."
+
+#: templates/cars/form.html:9
+msgid "JPG, PNG or WebP, up to 5 MB each. The first photo is the main photo."
+msgstr ""
+"JPG, PNG ose WebP, deri në 5 MB secila. Fotografia e parë është kryesorja."
+
+#: templates/cars/form.html:11
+msgid "Current photos"
+msgstr "Fotografitë aktuale"
+
+#: templates/cars/form.html:12
+msgid "Main photo"
+msgstr "Fotografia kryesore"
+
+#: templates/cars/form.html:12
+msgid "Make main"
+msgstr "Bëje kryesore"
+
+#: templates/cars/form.html:13 templates/dashboard/index.html:9
+msgid "Delete"
+msgstr "Fshi"
+
+#: templates/cars/form.html:14
+msgid "Preview"
+msgstr "Parapamje"
+
+#: templates/cars/form.html:14
+msgid "Publish"
+msgstr "Publiko"
+
+#: templates/cars/list.html:3
+msgid "Filters"
+msgstr "Filtrat"
+
+#: templates/cars/list.html:5
+msgid "Search"
+msgstr "Kërko"
+
+#: templates/cars/list.html:6
+msgid "All"
+msgstr "Të gjitha"
+
+#: templates/cars/list.html:8 templates/cars/list.html:13
+msgid "Min"
+msgstr "Min"
+
+#: templates/cars/list.html:8 templates/cars/list.html:13
+msgid "Max"
+msgstr "Maks"
+
+#: templates/cars/list.html:9
+msgid "From"
+msgstr "Nga"
+
+#: templates/cars/list.html:9
+msgid "To"
+msgstr "Deri"
+
+#: templates/cars/list.html:10
+msgid "Max mileage (km)"
+msgstr "Kilometrat maksimale (km)"
+
+#: templates/cars/list.html:14
+msgid "Min power (hp)"
+msgstr "Fuqia minimale (hp)"
+
+#: templates/cars/list.html:19
+msgid "Sort by"
+msgstr "Rendit sipas"
+
+#: templates/cars/list.html:20
+msgid "Apply filters"
+msgstr "Apliko filtrat"
+
+#: templates/cars/list.html:20 templates/cars/list.html:23
+msgid "Reset"
+msgstr "Pastro"
+
+#: templates/cars/list.html:23
+msgid "No cars match your filters."
+msgstr "Asnjë makinë nuk përputhet me filtrat."
+
+#: templates/dashboard/favorites.html:5
+msgid "No saved cars yet."
+msgstr "Nuk ke ruajtur ende makina."
+
+#: templates/dashboard/index.html:4
+msgid "My listings"
+msgstr "Njoftimet e mia"
+
+#: templates/dashboard/index.html:4
+msgid "Total views"
+msgstr "Vizitat gjithsej"
+
+#: templates/dashboard/index.html:5
+msgid "Listing"
+msgstr "Njoftimi"
+
+#: templates/dashboard/index.html:5
+msgid "Status"
+msgstr "Statusi"
+
+#: templates/dashboard/index.html:5
+msgid "Views"
+msgstr "Vizita"
+
+#: templates/dashboard/index.html:8
+msgid "Mark as sold"
+msgstr "Shëno si të shitur"
+
+#: templates/dashboard/index.html:9
+msgid "Delete this listing?"
+msgstr "Të fshihet ky njoftim?"
+
+#: templates/dashboard/index.html:10
+msgid "You have no listings yet."
+msgstr "Nuk ke ende njoftime."
+
+#: templates/dealerships/detail.html:4 templates/dealerships/form.html:2
+msgid "Edit dealership"
+msgstr "Modifiko autosallonin"
+
+#: templates/dealerships/detail.html:7
+msgid "No listings yet."
+msgstr "Ende nuk ka njoftime."
+
+#: templates/dealerships/form.html:2 templates/dealerships/list.html:2
+msgid "Register a dealership"
+msgstr "Regjistro një autosallon"
+
+#: templates/dealerships/list.html:3
+msgid "No dealerships yet."
+msgstr "Ende nuk ka autosalone."
+
+#: templates/home.html:10
+msgid "Find the car of your dreams."
+msgstr "Gjej makinën e ëndrrave të tua."
+
+#: templates/home.html:11
+msgid ""
+"Browse cars for sale, compare prices and find the right offer. Publish your "
+"car and find the buyer."
+msgstr ""
+"Shiko makina për shitje, krahaso çmimet dhe gjej ofertën e duhur. Publiko "
+"makinën tënde dhe gjej blerësin."
+
+#: templates/home.html:13 templates/home.html:23
+msgid "Active listings"
+msgstr "Njoftime aktive"
+
+#: templates/home.html:25 templates/home.html:26
+msgid "Newest listing"
+msgstr "Njoftimi i fundit"
+
+#: templates/home.html:33
+msgid "Brands"
+msgstr "Markat"
+
+#: templates/home.html:34
+msgid "New today"
+msgstr "Të reja sot"
+
+#: templates/home.html:37
+msgid "Most searched brands"
+msgstr "Markat më të kërkuara"
+
+#: templates/home.html:42
+msgid "VIP cars"
+msgstr "Makinat VIP"
+
+#: templates/home.html:44
+msgid "Latest listings"
+msgstr "Makinat e fundit të publikuara"
+
+#: templates/home.html:44 templates/home.html:51
+msgid "See all"
+msgstr "Shiko të gjitha"
+
+#: templates/home.html:45
+msgid "No listings yet. Be the first to publish a car."
+msgstr "Ende nuk ka njoftime. Bëhu i pari që publikon një makinë."
+
+#: templates/home.html:47
+msgid "Recommended"
+msgstr "Të rekomanduara"
+
+#: templates/home.html:49
+msgid "Partner ads"
+msgstr "Reklama nga partnerë"
+
+#: templates/home.html:53
+msgid "How it works"
+msgstr "Si funksionon"
+
+#: templates/home.html:54
+msgid "Create an account"
+msgstr "Krijo një llogari"
+
+#: templates/home.html:54
+msgid "Sign up for free in less than a minute."
+msgstr "Regjistrohu falas për më pak se një minutë."
+
+#: templates/home.html:55
+msgid "Publish your car"
+msgstr "Publiko makinën tënde"
+
+#: templates/home.html:55
+msgid "Add details and photos. Your listing goes live after review."
+msgstr "Shto detajet dhe fotografitë. Njoftimi publikohet pas shqyrtimit."
+
+#: templates/home.html:56
+msgid "Get contacted"
+msgstr "Merr kontakte"
+
+#: templates/home.html:56
+msgid "Buyers call you or message you on WhatsApp."
+msgstr "Blerësit të telefonojnë ose të shkruajnë në WhatsApp."
+
+#: templates/home.html:58
+msgid "Ready to sell your car?"
+msgstr "Gati të shesësh makinën tënde?"
+
+#: templates/home.html:58
+msgid "Publish your listing in minutes. It's free."
+msgstr "Publiko njoftimin brenda pak minutash. Është falas."
+
+#: templates/legal.html:4
+msgid ""
+"By using AutoMarket.al you agree to publish only accurate listings for "
+"vehicles you are entitled to sell. Listings may be rejected or removed by "
+"the administrators. AutoMarket.al is a marketplace and is not a party to any"
+" sale."
+msgstr ""
+"Duke përdorur AutoMarket.al pranon të publikosh vetëm njoftime të sakta për "
+"automjete që ke të drejtë t’i shesësh. Njoftimet mund të refuzohen ose hiqen"
+" nga administratorët. AutoMarket.al është treg online dhe nuk është palë në "
+"asnjë shitje."
+
+#: templates/legal.html:6
+msgid ""
+"We store the account and listing data you provide in order to operate the "
+"marketplace. Phone numbers you add to a listing are visible to visitors. We "
+"do not sell your personal data."
+msgstr ""
+"Ruajmë të dhënat e llogarisë dhe të njoftimeve që na jep për të operuar "
+"platformën. Numrat e telefonit që shton në një njoftim janë të dukshëm për "
+"vizitorët. Nuk i shesim të dhënat e tua personale."
+
+#: templates/legal.html:7
+msgid ""
+"This text is a placeholder and must be reviewed by a lawyer before launch."
+msgstr ""
+"Ky tekst është provizor dhe duhet shqyrtuar nga një jurist para publikimit."
+
+#~ msgid "Brand or model"
+#~ msgstr "Markë ose model"
+
+#~ msgid "Max price (€)"
+#~ msgstr "Çmimi maksimal (€)"
+
+#~ msgid "More filters"
+#~ msgstr "Më shumë filtra"
+
+#~ msgid "Free to list"
+#~ msgstr "Publikim falas"
+
+#~ msgid "Call or message on WhatsApp"
+#~ msgstr "Telefono ose shkruaj në WhatsApp"
+
+#~ msgid "Verified dealerships"
+#~ msgstr "Autosallone të verifikuara"
+
+#~ msgid "Tap the car to rev the engine"
+#~ msgstr "Prek makinën për të ndezur motorin"

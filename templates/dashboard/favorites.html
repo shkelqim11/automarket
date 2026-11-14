@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}<div class="wrap" style="padding:36px 20px"><h1>{% trans "Favorites" %}</h1>
+{% if favs %}<div class="grid">{% for f in favs %}{% with car=f.car %}{% include "_card.html" %}{% endwith %}{% endfor %}</div>
+<p><a class="btn ghost" href="{% url 'cars:compare' %}?{% for f in favs|slice:':3' %}id={{ f.car.pk }}&{% endfor %}">{% trans "Compare" %}</a></p>
+{% else %}<div class="empty">{% trans "No saved cars yet." %}</div>{% endif %}</div>{% endblock %}
